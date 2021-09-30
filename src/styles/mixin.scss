@@ -17,9 +17,17 @@
     @if $type == "horizontal" {
         align-items: center;
     } @else if $type == "vertical" {
-        justify-content: space-around;
+        justify-content: space-between;
     } @else if $type == "both" {
       justify-content: space-around;
       align-items: center;
     }
+  }
+
+  @mixin btn($type: 'btn') {
+    border: 2px solid $btnColor;
+    color: $btnColor;
+    background-color: $footerTop;
+    padding: 12px 17px;
+    text-align: center;
   }

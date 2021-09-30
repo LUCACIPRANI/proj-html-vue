@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// import
 export default {
   name: 'Grooming',
   props: ['info'],

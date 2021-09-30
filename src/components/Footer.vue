@@ -94,10 +94,7 @@ footer {
         font-weight: 800;
       }
       .btn {
-        border: 2px solid $btnColor;
-        color: $btnColor;
-        background-color: $footerTop;
-        padding: 12px 17px;
+        @include btn();
       }
       .social{
           color: white;
@@ -120,7 +117,7 @@ footer {
         bottom: 0;
         right: 3%;
         background-color: #303030;
-        padding: 7px 19px;
+        padding: 5px 15px;
     }
   }
 }

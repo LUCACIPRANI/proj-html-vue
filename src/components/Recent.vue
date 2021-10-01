@@ -17,3 +17,5 @@ export default {
 @import "@/styles/mixin.scss";
 @import "@/styles/general.scss";
 @import "@/styles/vars.scss";
+
+</style>

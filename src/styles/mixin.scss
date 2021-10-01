@@ -24,6 +24,21 @@
     }
   }
 
+  @mixin startCol($type: "both") {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10%;
+    @if $type == "vertical" {
+      justify-content: start;
+    } @else if $type == "horizontal" {
+      align-items: center;
+    } @else if $type == "both" {
+      justify-content: start;
+      align-items: center;
+    }
+  }
+
   @mixin btn($type: 'btn') {
     border: 2px solid $btnColor;
     color: $btnColor;

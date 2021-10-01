@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <h1>hf</h1>
+    <div class="sm_title"> WE HAVE YOU COVERED</div>
+    <div class="title">Avada Grooming Products</div>
+    <div>
+
+    </div>
+    <div class="btn">SHOP OUR PRODUCT RANGE</div>
   </div>
 </template>
 
@@ -18,3 +23,4 @@ export default {
 @import "@/styles/mixin.scss";
 @import "@/styles/general.scss";
 @import "@/styles/vars.scss";
+</style>

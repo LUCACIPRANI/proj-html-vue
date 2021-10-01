@@ -1,18 +1,30 @@
 <template>
-  <div class="award">
-    <h1>hsisj</h1>
-    <Services :key="index" :info="character"/>
-    <Grooming :key="index" :info="character"/>
-    <Shaving :key="index" :info="character"/>
-    <Reviews :key="index" :info="character"/>
-    <Recent :key="index" :info="character"/>
+<main>
+    <div class="award">
+        <div class="sm_title"> AWARD WINNING</div>
+        <div class="title">Pro Barbers</div>
+        <div class="btn">MEET YOUR NEW BARBER</div>
+    </div>
+    <Services 
+        v-for="(service, index) in services" 
+        :key="index"
+        :info="service"
+    />
+    <Grooming/>
+    <Butter/>
+    <Shaving/>
+    <Reviews/>
+    <Recent/>
+</main>
 
-  </div>
 </template>
 
 <script>
+// import services from "@/src/datas/services.js";
+
 import Services from './Services.vue'
 import Grooming from './Grooming.vue'
+import Butter from './Butter.vue'
 import Shaving from './Shaving.vue'
 import Reviews from './Reviews.vue'
 import Recent from './Recent.vue'
@@ -23,6 +35,7 @@ export default {
   components: {
       Services,
       Grooming,
+      Butter,
       Shaving,
       Reviews,
       Recent,
@@ -43,5 +56,22 @@ export default {
   background-image: url("../assets/images/intro-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  @include centerC();
+  .sm_title{
+      font-size: 120%;
+      color: $btnColor;
+  }
+  .title{
+      font-size: 500%;
+      color: $mainTitle;
+  }
+  .btn{
+      @include btn();
+      margin-top: 20px;
+      width: 20%;
+      padding: 18px;
+      font-size: 110%;
+      font-weight: 600;
+  }
 }
 </style>

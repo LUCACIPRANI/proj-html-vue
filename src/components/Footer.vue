@@ -97,7 +97,7 @@ footer {
         @include btn();
       }
       .social{
-          color: white;
+          color: $firstTitle;;
           .fab{
               padding: 8px;
           }
@@ -113,7 +113,7 @@ footer {
     color: $footerText;
     .fa-chevron-up{
         position: absolute;
-        color: white;
+        color: $firstTitle;;
         bottom: 0;
         right: 3%;
         background-color: #303030;

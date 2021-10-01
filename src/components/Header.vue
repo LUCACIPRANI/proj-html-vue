@@ -79,17 +79,16 @@ color: $firstTitle;
   .left{
     position: relative;
     @include centerC();
-    width: 65%;
+    width: 60%;
     h1{
-      font-size: 550%;
+      @include title();
       position: absolute;
       bottom: 100px;
-      color: $firstTitle;
     }
     .content{
       position: absolute;
       top: -120px;
-      left: 19%;
+      left: 20%;
       .line{
         border-bottom: 4px solid $btnColor;
         height: 60px;

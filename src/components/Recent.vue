@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <h1>hf</h1>
+    <div class="sm_title"> TALES FROM THE BARBER SHOP</div>
+    <div class="title">Recent Blog posts</div>
+    <div></div>
+    <div class="btn">READ MORE FROM OUR BLOG</div>
   </div>
 </template>
 
@@ -18,4 +21,20 @@ export default {
 @import "@/styles/general.scss";
 @import "@/styles/vars.scss";
 
+.container{
+  height: 120vh;
+  background-color: #F5F5F5;
+  @include startCol();
+  .sm_title{
+      @include sm-title();
+  }
+  .title{
+      @include title();
+  }
+  .btn{
+    @include btn();
+    padding: 18px 20px;
+    background-color: #F5F5F5;
+  }
+}
 </style>

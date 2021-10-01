@@ -23,4 +23,24 @@ export default {
 @import "@/styles/mixin.scss";
 @import "@/styles/general.scss";
 @import "@/styles/vars.scss";
+
+.container{
+  height: 120vh;
+  background-image: url("../assets/images/avadabarbers-reviewsbackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include startCol();
+  .sm_title{
+      @include sm-title();
+  }
+  .title{
+      @include title();
+  }
+  .btn{
+      @include btn();
+      width: 25%;
+      padding: 18px;
+  }
+}
+
 </style>

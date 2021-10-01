@@ -45,4 +45,26 @@
     background-color: $footerTop;
     padding: 12px 17px;
     text-align: center;
+    font-size: 110%;
+    margin-top: 20px;
+    font-weight: 700;
   }
+
+  @mixin title($type: 'title') {
+    font-size: 500%;
+    font-weight: bold;
+    color: $mainTitle;
+  }
+
+  @mixin sm-title($type: 'small') {
+    font-size: 120%;
+    color: $btnColor;
+  }
+
+  @mixin parag($type: 'paragraph') {
+    line-height: 1.8rem;
+      font-size: 120%;
+      color: $secondTitle;
+  }
+
+ 

@@ -1,4 +1,4 @@
-const services = [
+const servicesD = [
     {
         src: "../assets/images/trimcut-icon.png",
         title: "John Doe",
@@ -16,4 +16,4 @@ const services = [
     },
 
 ]
-export { services}
+export {servicesD}

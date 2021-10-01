@@ -11,7 +11,6 @@
         :info="service"
     />
     <Grooming/>
-    <Butter/>
     <Shaving/>
     <Reviews/>
     <Recent/>
@@ -20,22 +19,25 @@
 </template>
 
 <script>
-// import services from "@/src/datas/services.js";
+import * as servicesD from "@/datas/services.js";
 
 import Services from './Services.vue'
 import Grooming from './Grooming.vue'
-import Butter from './Butter.vue'
 import Shaving from './Shaving.vue'
 import Reviews from './Reviews.vue'
 import Recent from './Recent.vue'
 
 export default {
   name: "Main",
+  data() {
+      return{
+          services: servicesD,
+      }
+  },
   props: {},
   components: {
       Services,
       Grooming,
-      Butter,
       Shaving,
       Reviews,
       Recent,
@@ -52,26 +54,20 @@ export default {
 
 .award {
   height: 60vh;
-  background: black;
   background-image: url("../assets/images/intro-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   @include centerC();
   .sm_title{
-      font-size: 120%;
-      color: $btnColor;
+      @include sm-title();
   }
   .title{
-      font-size: 500%;
-      color: $mainTitle;
+      @include title();
   }
   .btn{
       @include btn();
-      margin-top: 20px;
       width: 20%;
       padding: 18px;
-      font-size: 110%;
-      font-weight: 600;
   }
 }
 </style>

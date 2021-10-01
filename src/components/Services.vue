@@ -3,8 +3,12 @@
     <div class="award">
         <div class="sm_title"> MENS GROOMING</div>
         <div class="title">Services</div>
-        <div class="services">
-          <h1>{{info.title}}</h1>
+        <div class="products">
+          <div class="services">
+            <img :src="require(info.src)" :alt="info.title">
+            <h5>{{info.title}}</h5>
+            <p>{{info.description}}</p>
+          </div>
         </div>
         <div class="btn">READ ABOUT OUR SERVICES</div>
     </div>
@@ -28,29 +32,32 @@ export default {
 
 .container{
   background-color: $firstTitle;
-  height: 120vh;
-  border: 1px solid red;
+  height: 135vh;
   @include startCol();
   .sm_title{
-      font-size: 120%;
-      color: $btnColor;
+      @include sm-title();
   }
   .title{
-      font-size: 500%;
-      font-weight: bold;
-      color: $mainTitle;
+      @include title();
+  }
+  p{
+     @include parag();
   }
   .btn{
-      @include btn();
-      margin-top: 20px;
-      padding: 15px 30px;
-      font-size: 110%;
-      font-weight: 700;
-      background-color: $firstTitle;
+    @include btn();
+    padding: 18px 20px;
+    margin-left: 40px; //momentaneo
+    width: 80%;
+    background-color: $firstTitle;
   }
-  .services{
-    height: 500px;
-    border: 1px solid red;
+  .products{
+    @include centerR();
+    .services{
+      height: 400px;
+      width: 350px;
+      border: 1px solid red;  //debug
+      margin: 70px 20px;
+    }
   }
 }
 </style>

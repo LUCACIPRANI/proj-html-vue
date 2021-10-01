@@ -30,8 +30,8 @@
 
     <div class="footer-down">
       <h5>
-        © Copyright 2012-2020 | Avada Theme by ThemeFusion | All Rights Reserved
-        | Powered by WordPress
+        © Copyright 2012-2020 | Avada Theme by <span>ThemeFusion</span>  | All Rights Reserved
+        | Powered by <span>WordPress</span>
       </h5>
       <i class="fas fa-chevron-up"></i>
     </div>
@@ -118,6 +118,9 @@ footer {
         right: 3%;
         background-color: #303030;
         padding: 5px 15px;
+    }
+    span{
+      color: $btnColor;
     }
   }
 }

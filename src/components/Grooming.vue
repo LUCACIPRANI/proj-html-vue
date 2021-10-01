@@ -1,46 +1,39 @@
 <template>
-  <div class="container">
-    <div class="sm_title"> WE HAVE YOU COVERED</div>
-    <div class="title">Avada Grooming Products</div>
-    <div>
-
+  <div class="grooming">
+    <img :src="require('../assets/' + info.src)" :alt="info.title" />
+    <div class="info">
+      <h1>{{ info.title }}</h1>
+      <h3>{{ info.price }}</h3>
     </div>
-    <div class="btn">SHOP OUR PRODUCT RANGE</div>
   </div>
 </template>
 
 <script>
 // import
 export default {
-  name: 'Grooming',
-  props: ['info'],
-}
+  name: "Grooming",
+  props: ["info"],
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-// @import '~@fortawesome/fontawesome-free/css/all.min.css';
 @import "@/styles/mixin.scss";
 @import "@/styles/general.scss";
 @import "@/styles/vars.scss";
 
-.container{
-  height: 120vh;
-  background-image: url("../assets/images/avadabarbers-reviewsbackground.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  @include startCol();
-  .sm_title{
-      @include sm-title();
-  }
-  .title{
-      @include title();
-  }
-  .btn{
-      @include btn();
-      width: 25%;
-      padding: 18px;
-  }
+.grooming {
+  @include centerC();
 }
-
+img {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
+.info {
+  align-self: flex-start;
+  text-align: start;
+  color: $btnColor;
+  line-height: 2.2rem;
+}
 </style>

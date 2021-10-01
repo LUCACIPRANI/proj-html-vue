@@ -113,10 +113,9 @@ color: $firstTitle;
     img{
       width: 70%;
     }
-    .fa-window-restore,
-    .fa-shopping-cart{
-      position: absolute;
-      top: 8%;
+    i{
+      position: fixed;
+      top: 20%;
       right: 1%;
       @include centerC();
       background-color: white;
@@ -125,15 +124,18 @@ color: $firstTitle;
       height: 65px;
       width: 65px;
       font-size: 140%;
-        color: #33475B;
+      color: #33475B;
+      -moz-box-shadow:    1px 1px 2px 1px #ccc;
+      -webkit-box-shadow: 1px 1px 2px 1px #ccc;
+      box-shadow:         1px 1px 2px 1px #ccc;
       span{
         font-size: 65%;
         padding-top: 5px;
       }
     }
     .fa-shopping-cart{
-      position: absolute;
-      top: 19%;
+      position: fixed;
+      top: 29%;
     }
   }
 }

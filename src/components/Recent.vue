@@ -1,40 +1,48 @@
 <template>
-  <div class="container">
-    <div class="sm_title"> TALES FROM THE BARBER SHOP</div>
-    <div class="title">Recent Blog posts</div>
-    <div></div>
-    <div class="btn">READ MORE FROM OUR BLOG</div>
-  </div>
+    <div class="elements">
+       <img :src="require('../assets/' + info.src)" :alt="info.title" />
+        <div class="info">
+          <h1>{{ info.title }}</h1>
+          <h3>{{ info.description }}</h3>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'Recent',
-  props: ['msg']
-}
+  name: "Recent",
+  props: ["info"],
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-// @import '~@fortawesome/fontawesome-free/css/all.min.css';
 @import "@/styles/mixin.scss";
 @import "@/styles/general.scss";
 @import "@/styles/vars.scss";
 
-.container{
-  height: 120vh;
-  background-color: #F5F5F5;
-  @include startCol();
-  .sm_title{
-      @include sm-title();
+.elements {
+  width: 35%;
+  margin: 50px 15px;
+  img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
   }
-  .title{
-      @include title();
+  .info {
+  align-self: flex-start;
+  text-align: center;
+  line-height: 1.7rem;
+  h1{
+    color: $btnColor;
+    padding: 10px 0;
+    line-height: 2.4rem;
   }
-  .btn{
-    @include btn();
-    padding: 18px 20px;
-    background-color: #F5F5F5;
+  h3{
+    color: $secondTitle;
+  }
+  img:last-child{
+    padding-bottom: 70%;
+  }
   }
 }
 </style>

@@ -30,8 +30,8 @@
 
     <div class="footer-down">
       <h5>
-        © Copyright 2012-2020 | Avada Theme by <span>ThemeFusion</span>  | All Rights Reserved
-        | Powered by <span>WordPress</span>
+        © Copyright 2012-2020 | Avada Theme by <span>ThemeFusion</span> | All
+        Rights Reserved | Powered by <span>WordPress</span>
       </h5>
       <i class="fas fa-chevron-up"></i>
     </div>
@@ -47,14 +47,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "@/styles/mixin.scss";
 @import "@/styles/general.scss";
 @import "@/styles/vars.scss";
 
 footer {
   height: 85vh;
+  // width: 100%;
+  // position: fixed;
+  // bottom: 0;
+
   .footer-top {
+    bottom: 0;
     @include centerR();
     height: 85%;
     background-color: $footerTop;
@@ -96,11 +101,11 @@ footer {
       .btn {
         @include btn();
       }
-      .social{
-          color: $firstTitle;;
-          .fab{
-              padding: 8px;
-          }
+      .social {
+        color: $firstTitle;
+        .fab {
+          padding: 8px;
+        }
       }
     }
   }
@@ -111,15 +116,15 @@ footer {
     background-color: $footerDown;
     text-align: center;
     color: $footerText;
-    .fa-chevron-up{
-        position: absolute;
-        color: $firstTitle;;
-        bottom: 0;
-        right: 3%;
-        background-color: #303030;
-        padding: 5px 15px;
+    .fa-chevron-up {
+      position: absolute;
+      color: $firstTitle;
+      bottom: 0;
+      right: 3%;
+      background-color: #303030;
+      padding: 5px 15px;
     }
-    span{
+    span {
       color: $btnColor;
     }
   }
